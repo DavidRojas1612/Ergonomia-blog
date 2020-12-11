@@ -181,6 +181,20 @@ ul li,
 ol li {
   padding-left: var(--spacing-0);
   margin-bottom: calc(var(--spacing-8) / 2);
+  position: relative;
+}
+
+
+ul li:before,
+ol li:before {
+  content: "";
+  position: absolute;
+  background-color: #cbd5e0;
+  border-radius: 50%;
+  width: .375em;
+  height: .375em;
+  top: .6875em;
+  left: -1.2em;
 }
 
 li > p {
@@ -201,9 +215,7 @@ blockquote {
   margin-left: calc(-1 * var(--spacing-6));
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid var(--color-primary);
-  font-size: var(--fontSize-2);
-  font-style: italic;
+  font-size: var(--fontSize-1);
   margin-bottom: var(--spacing-8);
 }
 
@@ -211,10 +223,6 @@ blockquote > :last-child {
   margin-bottom: var(--spacing-0);
 }
 
-blockquote > ul,
-blockquote > ol {
-  list-style-position: inside;
-}
 
 table {
   width: 100%;
@@ -317,17 +325,4 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
-}
-
-/* Media queries */
-
-@media (max-width: 42rem) {
-  blockquote {
-    padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
-    margin-left: var(--spacing-0);
-  }
-  ul,
-  ol {
-    list-style-position: inside;
-  }
 }
