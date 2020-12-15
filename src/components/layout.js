@@ -22,7 +22,26 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+      <header style={{ display: 'flex',  justifyContent: 'center', alignItems: 'center' }} className="global-header">
+        {header}
+        <a 
+          style={{
+            width: '120px',
+            height: '40px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            border: '2px solid #005b99',
+            borderRadius: '5px',
+            color: '#005b99',
+            fontWeight: 'bold',
+            marginLeft: '10px'
+          }} 
+          href="https://niosh.vercel.app/"
+        >
+            Aplicación
+        </a>
+      </header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}
